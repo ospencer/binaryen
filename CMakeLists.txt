@@ -208,8 +208,8 @@ else()
 
   option(ENABLE_WERROR "Enable -Werror" ON)
 
-  set(THREADS_PREFER_PTHREAD_FLAG ON)
-  set(CMAKE_THREAD_PREFER_PTHREAD ON)
+  set(THREADS_PREFER_PTHREAD_FLAG OFF)
+  set(CMAKE_THREAD_PREFER_PTHREAD OFF)
   find_package(Threads REQUIRED)
   add_cxx_flag("-std=c++${CXX_STANDARD}")
   if(NOT EMSCRIPTEN)
